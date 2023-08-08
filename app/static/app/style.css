@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600');
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Reem+Kufi+Ink&display=swap');
+
+ :root {
+	 --main-color: rgba(0, 0, 0, 0.2);
+	 --secondary-color: rgba(0, 0, 0, 0.9);
+	 --sans: "josefin sans", sans serif;
+	 --two : "reem kufi ink", sans serif;
+}
+
+.nav__title{
+
+	font-family: var(--two) !important;
+	justify-self: center;
+	padding-left: 15px;
+	
+
+}
+.__span{
+	border: 1px solid #432a2a;
+	border-radius: 0.5rem;
+	justify-content: center;
+	justify-content: center;
+	text-align: center;
+}
+.title{
+	padding-top: 2rem;
+	font-family: "dancing script", cursive;
+}
+ body {
+	text-align: center;
+
+
+	justify-content: center;
+	 background:rgba(0, 0, 0, 0.1) ;
+}
+
+ .container {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 margin-left: -200px;
+	 margin-top: -200px;
+	 width: 400px;
+	 height: 400px;
+	 background: var(--main-color);
+	 border-radius: 5px;
+	 z-index: 1000;
+	 /* font-family: "dancing script", cursive; */
+	 overflow: hidden;
+	 color: #797d7f;
+	 letter-spacing: 0.5px;
+}
+ .hidden {
+	 display: none;
+}
+ .inner {
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 opacity: 0;
+	 transition: 1s;
+	 visibility: hidden;
+}
+ .box {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 70%;
+	 height: 60%;
+	 transform: translate(-50%, -50%);
+	 background: #fff;
+	 border-radius: 5px;
+	 overflow: hidden;
+	 box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+	 font-size: 1.3rem;
+}
+ .number::before {
+	 content: "";
+	 position: absolute;
+	 top: -130px;
+	 right: -30px;
+	 width: 90px;
+	 height: 180px;
+	 background: var(--secondary-color);
+	 transform: rotate(-45deg);
+	 z-index: -1;
+	 box-shadow: 0 0 0.7rem rgba(0, 0, 0, .5);
+}
+ .number {
+	 /* font-family: var(--sans); */
+	 position: absolute;
+	 margin: 0;
+	 top: 15px;
+	 right: 15px;
+	 color: rgba(255, 255, 255, 0.7);
+}
+ .quote {
+	 position: absolute;
+	 top: 35%;
+	 font-size: 1.2rem;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 80%;
+}
+ .credit {
+	 position: absolute;
+	 top: 60%;
+	 right: 5%;
+	 font-family: var(--sans);
+	 font-size: 0.8rem;
+	 font-weight: 500;
+}
+ .credit::before {
+	 content: "⸛ ";
+	 vertical-align: middle;
+	 font-size: 1.4rem;
+}
+ .fas {
+
+	 position: absolute;
+	 top: 0%;
+	 left: 3%;
+	 font-size: 2.5rem;
+	 color: rgba(100, 58, 122, .2);
+}
+ input {
+	 width: 100%;
+	 transition: 0.3s;
+}
+ .button p {
+	 background: rgba(0, 0, 0, 0.9);
+	 text-align: center;
+	 color: #fff;
+	 padding: 1rem 0;
+	 width: 100%;
+	 font-family: var(--sans);
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 margin: 0;
+	 transition: 0.2s ease-out;
+}
+ .button p:hover {
+	 background: var(--secondary-color);
+	 cursor: pointer;
+}
+ #card-one:checked ~ .container .inner-one, #card-two:checked ~ .container .inner-two, #card-three:checked ~ .container .inner-three , #card-four:checked ~ .container .inner-four , #card-five:checked ~ .container .inner-five , #card-six:checked ~ .container .inner-six , #card-seven:checked ~ .container .inner-seven , #card-eight:checked ~ .container .inner-eight , #card-nine:checked ~ .container .inner-nine , #card-ten:checked ~ .container .inner-ten {
+	 opacity: 1;
+	 visibility: visible;
+}
+ #card-one:checked ~ .container .inner-two, #card-two:checked ~ .container .inner-three, #card-three:checked ~ .container .inner-four , #card-four:checked ~ .container .inner-five , #card-five:checked ~ .container .inner-six , #card-six:checked ~ .container .inner-seven , #card-seven:checked ~ .container .inner-eight , #card-eight:checked ~ .container .inner-nine , #card-nine:checked ~ .container .inner-ten , #card-ten:checked ~ .container .inner-one {
+	 transform: scale(0.85);
+	 transform: scale(1) translate(-20rem);
+}
+
+
+
+.footer{
+	position: absolute;
+	
+	bottom: 10px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+}
+.footer section{
+	justify-self: center;
+	justify-content: center;
+	align-items: center;
+	bottom: 25px;
+	margin: 0 10px;
+}
+.footer_div{
+	justify-content: center;
+	align-items: center;
+}

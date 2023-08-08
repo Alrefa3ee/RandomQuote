@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes </title>
+
+</head>
+
+<body>
+    {% include "header.html" %}
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
+
+        <!-- title of page -->
+    <h1 class="title">Random Quotes</h1>
+
+    <!-- cretae random 10 quotes -->
+    <input id="card-one" class="hidden" type="radio" name="ok-button" checked>
+    <!-- <input id="card-three" class="hidden" type="radio" name="ok-button"> -->
+    {% for item in items %}
+    <input id="card-{{item.num}}" class="hidden" type="radio" name="ok-button">
+
+    {% endfor %}
+
+    <div class="container">
+        {% for item in items %}
+        <div class="inner inner-{{item.num}}">
+            <div class="box">
+                <div class="triangle">
+                </div>
+                <p class="number">{{item.id}}</p>
+                <div class="text">
+                    <i class="start-quote fas fa-quote-left"></i>
+                    <p class="quote">{{item.quote}}</p>
+                    <p class="credit">{{item.author}}</p>
+                </div>
+                <label class="button" id="__{{item.next}}" for="card-{{item.next}}">
+                    <p>next</p>
+                </label>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+<div>
+
+       {% include "footer.html" %}
+       <script>
+        
+        document.getElementById("__one").addEventListener("click", function() {
+            var url = window.location.href;
+            window.location.href = url;
+        });
+
+       </script>
+        <script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
+        <script src="https://codepen.io/fracturedNight/pen/exgzZg.js"></script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
