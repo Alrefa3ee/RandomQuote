@@ -21,7 +21,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def login_cookie(request,num):
-    if num==0:
+    if num=="0":
         config =  {
             "username": "202311821",
             "password": "c5_tbP99",
